@@ -19,7 +19,8 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "bmatzner/foundation-bundle": "~5.2"
+        "bmatzner/foundation-bundle": "~5.2",
+        "bmatzner/modernizr-bundle": "~2.7"
     },
     "scripts": {
         "post-install-cmd": [

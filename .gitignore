@@ -4,3 +4,5 @@
 .sass-cache
 /src/Bb/SiteBundle/Resources/public/scss/.sass-cache
 /web/bundles
+/src/Bb/SiteBundle/Resources/public/css
+
