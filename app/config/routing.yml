@@ -1,0 +1,5 @@
+bb_site:
+    resource: "@BbSiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

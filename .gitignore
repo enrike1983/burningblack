@@ -1,0 +1,6 @@
+/vendor
+/app/cache
+/app/logs
+.sass-cache
+/src/Bb/SiteBundle/Resources/public/scss/.sass-cache
+/web/bundles
