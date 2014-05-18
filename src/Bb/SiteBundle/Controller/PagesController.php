@@ -15,6 +15,10 @@ class PagesController extends Controller
      */
     public function homeAction()
     {
+    	$news = $this->get('bb_site.manager.news')->getRecentNews();
+
+    	die(var_dump($news));
+
     	return array();
     }
 }

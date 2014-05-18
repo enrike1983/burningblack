@@ -1,0 +1,22 @@
+body {
+	background: black;
+
+	#main_image {
+		width: 980px;
+		margin: 0 auto;
+	}
+
+	.social-container {
+		height: 30px;
+		width: 980px;
+		margin: 0 auto;
+
+		.social-boxes {
+			float:right;
+			color: white;
+			float: right;
+			width: 130px;
+			margin-top: 10px;
+		}
+	}
+}

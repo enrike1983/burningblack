@@ -9,6 +9,7 @@
         <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerfoundation/css/foundation.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/css/app.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/css/main.css') }}" />
 
         <script type="text/javascript" src="{{ asset('bundles/bmatznermodernizr/js/modernizr.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/bmatznerjquery/js/jquery.min.js') }}"></script>
@@ -16,13 +17,28 @@
         <title>Burning Black</title>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=127434720711074";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <header>
           <div class="social-container">
-            qui i socialz
+            <div class="social-boxes">
+                <div class="fb-like" data-href="https://www.facebook.com/burningblackofficial" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
           </div>
         </header>
+        <div class="row">
+            <img src="bundles/bbsite/images/bb_bg.jpg" id="main_image">
+        </div>
+            
         <div id="content">
             {% block body %}{% endblock %}
         </div>
+        
     </body>
 </html>

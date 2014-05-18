@@ -20,7 +20,9 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "bmatzner/foundation-bundle": "~5.2",
-        "bmatzner/modernizr-bundle": "~2.7"
+        "bmatzner/modernizr-bundle": "~2.7",
+
+        "gedmo/doctrine-extensions": "v2.3.9"
     },
     "scripts": {
         "post-install-cmd": [
