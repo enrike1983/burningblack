@@ -6,3 +6,18 @@
 /web/bundles
 /src/Bb/SiteBundle/Resources/public/css
 
+# Conf files
+/app/config/parameters.yml
+
+# Composer
+composer.phar
+
+# Ide files
+.idea
+
+# Os files
+.DS_Store
+
+# Capifony files
+Capfile
+.rsync_cache/
