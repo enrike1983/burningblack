@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class PageRepository extends EntityRepository
 {
+	public function findActivePages()
+	{
+		return $this->createQueryBuilder('n')
+            ->where('n.is_active = :is_active')
+            ->setParameter('is_active', 1)
+            ->getQuery()
+            ->getResult();
+	}
 }

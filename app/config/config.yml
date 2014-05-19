@@ -29,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        pages_management: "@bb_site.manager.pages"
 
 # Assetic Configuration
 assetic:

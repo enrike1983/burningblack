@@ -1,8 +1,7 @@
 <div id="main-menu" class="top-bar" data-topbar>
   <ul>
-    <li><a href="#" class="main-menu-link">Link 1</a></li>
-    <li><a href="#" class="main-menu-link">Link 2</a></li>
-    <li><a href="#" class="main-menu-link">Link 3</a></li>
-    <li><a href="#" class="main-menu-link">Link 4</a></li>
+  	{% for page in  pages_management.getActivePages %}
+  		<li><a href="#" class="main-menu-link">{{ page.title }}</a></li>
+  	{% endfor %}
   </ul>
 </div>
