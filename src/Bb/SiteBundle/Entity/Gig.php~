@@ -6,10 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo; //doctrineExtension
 
 /**
- * @ORM\Entity(repositoryClass="Bb\SiteBundle\Entity\NewsRepository")
- * @ORM\Table(name="news")
+ * @ORM\Entity(repositoryClass="Bb\SiteBundle\Entity\GigRepository")
+ * @ORM\Table(name="gig")
  */
-class News
+class Gig
 {
     /**
      * @ORM\Column(type="integer")
@@ -22,12 +22,12 @@ class News
      * @ORM\Column(type="datetime")
      */
     protected $publish_date;
-
+    
     /**
      * @ORM\Column(type="string")
      */
-    protected $title;    
-    
+    protected $venue;
+
     /**
      * @ORM\Column(type="text")
      */
@@ -66,7 +66,7 @@ class News
      * Set publish_date
      *
      * @param \DateTime $publishDate
-     * @return News
+     * @return Gig
      */
     public function setPublishDate($publishDate)
     {
@@ -89,7 +89,7 @@ class News
      * Set description
      *
      * @param string $description
-     * @return News
+     * @return Gig
      */
     public function setDescription($description)
     {
@@ -109,10 +109,33 @@ class News
     }
 
     /**
+     * Set is_active
+     *
+     * @param boolean $isActive
+     * @return Gig
+     */
+    public function setIsActive($isActive)
+    {
+        $this->is_active = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * Get is_active
+     *
+     * @return boolean 
+     */
+    public function getIsActive()
+    {
+        return $this->is_active;
+    }
+
+    /**
      * Set created
      *
      * @param \DateTime $created
-     * @return News
+     * @return Gig
      */
     public function setCreated($created)
     {
@@ -135,7 +158,7 @@ class News
      * Set updated
      *
      * @param \DateTime $updated
-     * @return News
+     * @return Gig
      */
     public function setUpdated($updated)
     {
@@ -155,48 +178,25 @@ class News
     }
 
     /**
-     * Set is_active
+     * Set venue
      *
-     * @param boolean $isActive
-     * @return News
+     * @param string $venue
+     * @return Gig
      */
-    public function setIsActive($isActive)
+    public function setVenue($venue)
     {
-        $this->is_active = $isActive;
+        $this->venue = $venue;
 
         return $this;
     }
 
     /**
-     * Get is_active
-     *
-     * @return boolean 
-     */
-    public function getIsActive()
-    {
-        return $this->is_active;
-    }
-
-    /**
-     * Set title
-     *
-     * @param string $title
-     * @return News
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    /**
-     * Get title
+     * Get venue
      *
      * @return string 
      */
-    public function getTitle()
+    public function getVenue()
     {
-        return $this->title;
+        return $this->venue;
     }
 }

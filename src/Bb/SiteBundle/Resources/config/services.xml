@@ -7,6 +7,7 @@
     
     <parameters>
         <parameter key="bb_site.manager.news.class">Bb\SiteBundle\Manager\NewsManager</parameter>
+        <parameter key="bb_site.manager.gigs.class">Bb\SiteBundle\Manager\GigsManager</parameter>
     </parameters>
 
     <services>
@@ -16,6 +17,12 @@
                 <argument type="service" id="service_container" />
             </call>
         </service>
+        <service id="bb_site.manager.gigs" class="%bb_site.manager.gigs.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <call method="setServiceContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>        
     </services>
     
 </container>

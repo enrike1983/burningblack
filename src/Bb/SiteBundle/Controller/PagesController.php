@@ -16,9 +16,11 @@ class PagesController extends Controller
     public function homeAction()
     {
     	$news = $this->get('bb_site.manager.news')->getRecentNews();
+        $gigs = $this->get('bb_site.manager.gigs')->getRecentGigs();
 
-    	die(var_dump($news));
-
-    	return array();
+    	return array(
+            'news' => $news,
+            'gigs' => $gigs
+        );
     }
 }

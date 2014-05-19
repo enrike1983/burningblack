@@ -1,8 +1,7 @@
 body {
 	background: black;
 
-	#main_image {
-		width: 980px;
+	#main-image {
 		margin: 0 auto;
 	}
 
@@ -17,6 +16,17 @@ body {
 			float: right;
 			width: 130px;
 			margin-top: 10px;
+		}
+	}
+
+	#main-menu {
+		ul {
+			text-align: center;
+
+			li {
+				width: 50px;
+				display:inline;
+			}
 		}
 	}
 }

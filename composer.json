@@ -22,7 +22,8 @@
         "bmatzner/foundation-bundle": "~5.2",
         "bmatzner/modernizr-bundle": "~2.7",
 
-        "gedmo/doctrine-extensions": "v2.3.9"
+        "gedmo/doctrine-extensions": "v2.3.9",
+        "doctrine/doctrine-fixtures-bundle": "v2.2.0"
     },
     "scripts": {
         "post-install-cmd": [

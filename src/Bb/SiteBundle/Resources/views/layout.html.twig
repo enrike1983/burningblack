@@ -33,11 +33,14 @@
           </div>
         </header>
         <div class="row">
-            <img src="bundles/bbsite/images/bb_bg.jpg" id="main_image">
+            <img src="/bbsite/images/bb_bg.jpg" id="main-image">
         </div>
-            
+        <div class="row">
+            {% include 'BbSiteBundle::_menu.html.twig' %}
+        </div>
         <div id="content">
-            {% block body %}{% endblock %}
+            {% block body %}
+            {% endblock %}
         </div>
         
     </body>

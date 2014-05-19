@@ -2,7 +2,13 @@
 
 {% block body %}
 <div class="row">
-  <div class="large-7 columns">...</div>
+  <div class="large-7 columns">
+  	{% for new in news %}
+  		<div class="row">
+  			{{ new.id }}
+  		</div>
+  	{% endfor %}
+  </div>
   <div class="large-5 columns">...</div>
 </div>
 {% endblock %}
