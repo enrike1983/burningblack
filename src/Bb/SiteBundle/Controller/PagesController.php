@@ -10,17 +10,21 @@ use Symfony\Component\HttpFoundation\Response;
 class PagesController extends Controller
 {
     /**
-     * @Route("/")
-     * @Template("BbSiteBundle:Pages:home.html.twig")
+     * @Route("/{slug}", requirements={"slug" = "[0-9a-zA-Z\/\-]*"})
      */
-    public function homeAction()
+    public function pageAction($slug)
     {
+        //current page
+        $page = $this->get('bb_site.manager.pages')->getPageBySlug($slug);
+
+        $template = $page->getTemplate();
+
     	$news = $this->get('bb_site.manager.news')->getRecentNews();
         $gigs = $this->get('bb_site.manager.gigs')->getRecentGigs();
 
-    	return array(
+        return $this->render($template, array(
             'news' => $news,
             'gigs' => $gigs
-        );
+        ));
     }
 }

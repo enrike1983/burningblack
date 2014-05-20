@@ -7,7 +7,7 @@ use Gedmo\Mapping\Annotation as Gedmo; //doctrineExtension
 
 /**
  * @ORM\Entity(repositoryClass="Bb\SiteBundle\Entity\GigRepository")
- * @ORM\Table(name="gig")
+ * @ORM\Table(name="gigs")
  */
 class Gig
 {

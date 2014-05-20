@@ -23,4 +23,10 @@ class PagesManager
 		return $this->entityManager->getRepository('BbSiteBundle:Page')
 			->findActivePages();
 	}
+
+	public function getPageBySlug($slug)
+	{
+		return $this->entityManager->getRepository('BbSiteBundle:Page')
+			->findPageBySlug($slug);
+	}
 }
