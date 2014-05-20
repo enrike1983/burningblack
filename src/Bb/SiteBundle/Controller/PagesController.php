@@ -10,12 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 class PagesController extends Controller
 {
     /**
-     * @Route("/{slug}", requirements={"slug" = "[0-9a-zA-Z\/\-]*"})
+     * @Route("/{slug}", requirements={"slug"="[0-9a-zA-Z\/\-]*"})
      */
     public function pageAction($slug)
     {
         //current page
         $page = $this->get('bb_site.manager.pages')->getPageBySlug($slug);
+
+        if (!$page) {
+            throw $this->createNotFoundException('La pagina non esiste');
+        }
 
         $template = $page->getTemplate();
 
