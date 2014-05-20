@@ -20,7 +20,7 @@ class LoadPagesData implements FixtureInterface
             'music',
             'merchandise',
             'media',
-            'contact us'
+            'contacts'
         );
 
         foreach($pages_array as $page) {
@@ -28,7 +28,7 @@ class LoadPagesData implements FixtureInterface
             $page_obj->setTitle($page);
             $page_obj->setDescription('Bb headliner al wacken!Bb headliner al wacken!Bb headliner al wacken!Bb headliner al wacken!');
             $page_obj->setIsActive(true);
-            $page_obj->setTemplate('BbSiteBundle:Pages:home.html.twig');
+            $page_obj->setTemplate('BbSiteBundle:Pages:'.$page.'.html.twig');
 
             $manager->persist($page_obj);
         }
