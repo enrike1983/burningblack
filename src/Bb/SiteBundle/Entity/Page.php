@@ -42,6 +42,16 @@ class Page
      /**
      * @ORM\Column(type="boolean", nullable=true)
      */
+    protected $in_menu = true;   
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $menu_position;    
+
+     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
     protected $is_active = false;   
 
     /**
@@ -227,5 +237,51 @@ class Page
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set in_menu
+     *
+     * @param boolean $inMenu
+     * @return Page
+     */
+    public function setInMenu($inMenu)
+    {
+        $this->in_menu = $inMenu;
+
+        return $this;
+    }
+
+    /**
+     * Get in_menu
+     *
+     * @return boolean 
+     */
+    public function getInMenu()
+    {
+        return $this->in_menu;
+    }
+
+    /**
+     * Set menu_position
+     *
+     * @param integer $menuPosition
+     * @return Page
+     */
+    public function setMenuPosition($menuPosition)
+    {
+        $this->menu_position = $menuPosition;
+
+        return $this;
+    }
+
+    /**
+     * Get menu_position
+     *
+     * @return integer 
+     */
+    public function getMenuPosition()
+    {
+        return $this->menu_position;
     }
 }

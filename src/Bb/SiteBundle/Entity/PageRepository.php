@@ -24,9 +24,9 @@ class PageRepository extends EntityRepository
 	public function findPageBySlug($slug)
 	{
 		return $this->createQueryBuilder('p')
-            ->where('p.slug LIKE :slug')
-            ->setParameter('slug', '%'.$slug.'%')
+            ->where('p.slug = :slug')
+            ->setParameter('slug', $slug)
             ->getQuery()
-            ->getResult();		
+            ->getOneOrNullResult();		
 	}
 }

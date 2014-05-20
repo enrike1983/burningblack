@@ -23,6 +23,7 @@ class PagesController extends Controller
         $gigs = $this->get('bb_site.manager.gigs')->getRecentGigs();
 
         return $this->render($template, array(
+            'page' => $page,
             'news' => $news,
             'gigs' => $gigs
         ));
