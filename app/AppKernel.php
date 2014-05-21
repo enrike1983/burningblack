@@ -20,9 +20,20 @@ class AppKernel extends Kernel
             new Bmatzner\ModernizrBundle\BmatznerModernizrBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+
+            //sonata admin, fos user, etc.
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
             
             new Bb\SiteBundle\BbSiteBundle(),
-
+            new Bb\UserBundle\BbUserBundle(),
+            new Bb\AdminBundle\BbAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
