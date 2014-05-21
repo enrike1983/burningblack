@@ -1,5 +1,46 @@
-bb_site:
-    resource: "@BbSiteBundle/Controller/"
+bb_admin:
+    resource: "@BbAdminBundle/Controller/"
     type:     annotation
     prefix:   /
 
+bb_user:
+    resource: "@BbUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bb_site:
+    resource: "@BbSiteBundle/Controller/"
+    type:     annotation
+    prefix:   /pages
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /profile
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+sonata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
