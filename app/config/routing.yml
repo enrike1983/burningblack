@@ -1,13 +1,3 @@
-bb_admin:
-    resource: "@BbAdminBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-bb_user:
-    resource: "@BbUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 bb_site:
     resource: "@BbSiteBundle/Controller/"
     type:     annotation
