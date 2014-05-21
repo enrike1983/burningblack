@@ -18,7 +18,7 @@ class PagesManager
         $this->entityManager = $entityManager;
     }
 
-	public function getActivePages()
+	public function getMainMenu()
 	{
 		return $this->entityManager->getRepository('BbSiteBundle:Page')
 			->findActivePages();

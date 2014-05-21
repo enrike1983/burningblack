@@ -17,6 +17,8 @@ class PageRepository extends EntityRepository
 		return $this->createQueryBuilder('p')
             ->where('p.is_active = :is_active')
             ->setParameter('is_active', 1)
+            ->andWhere('p.in_menu = :in_menu')
+            ->setParameter('in_menu', 1)
             ->getQuery()
             ->getResult();
 	}

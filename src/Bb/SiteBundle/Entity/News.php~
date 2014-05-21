@@ -33,6 +33,12 @@ class News
      */
     protected $description;
 
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;     
+
      /**
      * @ORM\Column(type="boolean", nullable=true)
      */
