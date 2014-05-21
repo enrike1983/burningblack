@@ -7,7 +7,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class NewsAdmin extends Admin
+class GigsAdmin extends Admin
 {
     protected $datagridValues = array(
         '_page'       => 1,
@@ -24,7 +24,7 @@ class NewsAdmin extends Admin
                 'widget' => 'choice',
                 'label' => 'Data',
             ))
-            ->add('title', 'text', array('label' => 'Titolo'))
+            ->add('venue', 'text', array('label' => 'Venue'))
             ->add('description')
         ;
     }
@@ -34,7 +34,7 @@ class NewsAdmin extends Admin
     {
         $datagridMapper
             ->add('publish_date')
-            ->add('title')
+            ->add('venue')
             ->add('description')
         ;
     }
@@ -43,17 +43,9 @@ class NewsAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('title', null, array('label' => 'Titlo'))
+            ->addIdentifier('venue', null, array('label' => 'Venue'))
             ->add('publish_date', null, array('label' => 'Data'))
             ->add('description')
         ;
     }
-
-    public function getNewInstance()
-    {
-        $news = parent::getNewInstance();
-        $news->setPublishDate( new \DateTime( 'now' ) );
-        return $news;
-    }
-
 }

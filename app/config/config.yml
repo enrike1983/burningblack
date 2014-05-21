@@ -131,7 +131,8 @@ sonata_admin:
           Actions:
             label: Azioni eseguibili
             items:
-              - bb_admin.news            
+              - bb_admin.news
+              - bb_admin.gigs            
 
     security:
         handler: sonata.admin.security.handler.role
