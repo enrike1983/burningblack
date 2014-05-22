@@ -20,7 +20,7 @@ class LoadPagesData implements FixtureInterface
             'news' => array(
                 'menu_position' => 1
             ),
-            'biography' => array(
+            'bio' => array(
                 'menu_position' => 2
             ),
             'tour' => array(
@@ -29,7 +29,7 @@ class LoadPagesData implements FixtureInterface
             'music' => array(
                 'menu_position' => 4
             ),
-            'merchandise' => array(
+            'merch' => array(
                 'menu_position' => 5
             ),
             'media' => array(

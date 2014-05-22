@@ -2,7 +2,8 @@ body {
 	background: black;
 	font: normal 14px/20px Corbel, Arial, Verdana, 'Lucida Grande', 'Lucida Sans', Sans-Serif;
 	color: white;
-	background-image: url('/bundles/bbsite/images/firemoon.jpg');
+	font-weight: bold;
+	background-image: url('/bundles/bbsite/images/firemoon_edited.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 
@@ -10,15 +11,16 @@ body {
 		background: black;
 	}
 
-	.row {
-		max-width: 945px !important;
+	.row .row{
+		margin-left: -1.9375rem;
 	}
 
 	#content {
-		max-width: 945px;
-		background: black;
+		max-width: 810px;
+		background-image: url('/bundles/bbsite/images/trans_bg.png');
+		background-repeat: repeat;
 		margin: 0 auto;
-		padding: 0px 20px;
+		padding: 30px 20px;
 	}
 
 	h2 {
@@ -41,24 +43,21 @@ body {
 		margin: 0 auto;
 	}
 
-	.social-container {
-		height: 30px;
-		max-width: 945px;
-		margin: 0 auto;
-		background: black;
 
-		.social-boxes {
-			float:right;
-			color: white;
-			float: right;
-			width: 130px;
-			margin-top: 10px;
-		}
+	.social-boxes {
+		float:right;
+		color: white;
+		float: right;
+		width: 130px;
+		margin-top: 10px;
+		margin: 0 auto;
+		background: black;		
 	}
+
 
 	#main-menu {
 		height: 80px;
-		background: black;
+		background: transparent;
 		
 		ul {
 			margin: 20px 0px 0px 0px;
@@ -79,7 +78,8 @@ body {
 	}
 
 	.single-news {
-		margin-bottom: 30px !important;
+		margin-bottom: 15px !important;
+		padding: 0px 20px 15px 40px;
 
 		.publish-date {
 			font: normal 12px/18px Corbel, Arial, Verdana, 'Lucida Grande', 'Lucida Sans', Sans-Serif;
