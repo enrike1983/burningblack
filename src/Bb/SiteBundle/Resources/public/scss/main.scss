@@ -1,11 +1,21 @@
+/* For any viewports less than 1000px wide */
+@media (max-width: 1024px) {
+
+    body {
+        background-size: 1024px 768px !important; /* Force the image to its minimum width */
+    }
+
+}
+
 body {
 	background: black;
 	font: normal 14px/20px Corbel, Arial, Verdana, 'Lucida Grande', 'Lucida Sans', Sans-Serif;
 	color: white;
 	font-weight: bold;
 	background-image: url('/bundles/bbsite/images/firemoon_edited.jpg');
-	background-position: center center;
-	background-repeat: no-repeat;
+	background-position: top center;
+	background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
 
 	.top-bar {
 		background: black;
