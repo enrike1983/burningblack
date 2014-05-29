@@ -2,7 +2,7 @@
 @media (max-width: 1024px) {
 
     body {
-        background-size: 1024px 768px !important; /* Force the image to its minimum width */
+        background-size: 1024px 1024px !important; /* Force the image to its minimum width */
     }
 
 }
@@ -11,14 +11,27 @@ body {
 	background: black;
 	font: normal 14px/20px Corbel, Arial, Verdana, 'Lucida Grande', 'Lucida Sans', Sans-Serif;
 	color: white;
-	font-weight: bold;
-	background-image: url('/bundles/bbsite/images/firemoon_edited.jpg');
-	background-position: top center;
-	background-size:   cover;                      /* <------ */
+	background-image: url('/bundles/bbsite/images/main_background.jpg');
+	background-position: 50% -150px;
     background-repeat: no-repeat;
+    background-color: black;
 
 	.top-bar {
-		background: black;
+		background-image: url('/bundles/bbsite/images/trans_bg.png');
+		background-repeat: repeat;
+		background-color: transparent;
+		height: 95px;
+		border-bottom: 2px solid #6B2424;
+	}
+
+	#main-logo {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top:5px;
+		width: 445px;
 	}
 
 	.row .row{
@@ -26,7 +39,7 @@ body {
 	}
 
 	#content {
-		max-width: 810px;
+		border-top: 2px solid #6B2424;
 		background-image: url('/bundles/bbsite/images/trans_bg.png');
 		background-repeat: repeat;
 		margin: 0 auto;
@@ -67,7 +80,13 @@ body {
 
 	#main-menu {
 		height: 80px;
-		background: transparent;
+		background-image: url('/bundles/bbsite/images/top_bg.png');
+		background-repeat: repeat-x;
+		background-position: bottom;
+		border-bottom: 0px;
+		margin-bottom: 250px;
+		width: 100%;
+		height: 162px;
 		
 		ul {
 			margin: 20px 0px 0px 0px;
