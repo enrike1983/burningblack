@@ -11,11 +11,21 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/css/app.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/css/main.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/fontface/stylesheet.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/owl-carousel/owl.carousel.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bbsite/owl-carousel/owl.theme.css') }}" />
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="{{ asset('bundles/bbsite/owl-carousel/owl.carousel.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/bmatznermodernizr/js/modernizr.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/bmatznerfoundation/js/foundation.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/bmatznerfoundation/js/foundation/foundation.orbit.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+     
+              $("#owl-example").owlCarousel();
+             
+            });
+        </script>
         <title>Burning Black</title>
     </head>
     <body>
@@ -36,7 +46,7 @@
         </header>
         {% include 'BbSiteBundle::_menu.html.twig' %}
         <div class="row">
-            <img id="main-logo" src="/bundles/bbsite/images/logo.png">
+            <a href="/"><img id="main-logo" src="/bundles/bbsite/images/logo.png"></a>
         </div>
         <div id="content">
             {% block body %}

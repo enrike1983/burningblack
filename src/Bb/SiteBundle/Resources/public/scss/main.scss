@@ -5,6 +5,13 @@
         background-size: 1024px 1024px !important; /* Force the image to its minimum width */
     }
 
+    #main-menu {
+    	margin-bottom: 0px !important;
+    }
+
+    #logos-bar {
+    	text-align: center !important;
+    }
 }
 
 body {
@@ -16,21 +23,21 @@ body {
     background-repeat: no-repeat;
     background-color: black;
 
+    .twitter-timeline {
+    	width: 100% !important;
+    }
+
     #logos-bar {
+    	//870303 
+    	margin-bottom: 20px;
+    	padding-left: 30px;
 
     	.social-logo {
     		width: 40px;
     	}	
-    	//870303 
-    	margin-top: 20px;
-    	margin-bottom: 20px;
-
-		.social-logo-l {
-			margin-right: 30px;
-		}
-		.social-logo-r {
-			margin-left: 30px;
-		}
+    	.social-logo-r {
+    		margin-left: 20px;
+    	}
     }
 
 	.top-bar {
@@ -100,7 +107,7 @@ body {
 		background-repeat: repeat-x;
 		background-position: top;
 		border-bottom: 0px;
-		margin-bottom: 250px;
+		margin-bottom: 150px;
 		width: 100%;
 		height: 162px;
 		

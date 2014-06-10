@@ -15,7 +15,8 @@ class LoadPagesData implements FixtureInterface
     {
         $pages_array = array(
             'home' => array(
-                'in_menu' => false
+                'in_menu' => false,
+                'is_homepage' => true
             ),
             'news' => array(
                 'menu_position' => 1
@@ -49,6 +50,7 @@ class LoadPagesData implements FixtureInterface
             $page_obj->setTemplate('BbSiteBundle:Pages:'.$i.'.html.twig');
             
             isset($page['in_menu']) ? $page_obj->setInMenu($page['in_menu']) : '';
+            isset($page['is_homepage']) ? $page_obj->setIsHomepage($page['is_homepage']) : '';
             isset($page['menu_position']) ? $page_obj->setMenuPosition($page['menu_position']) : '';
 
             $manager->persist($page_obj);

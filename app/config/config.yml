@@ -132,7 +132,8 @@ sonata_admin:
             label: Azioni eseguibili
             items:
               - bb_admin.news
-              - bb_admin.gigs            
+              - bb_admin.gigs       
+              - bb_admin.banner      
 
     security:
         handler: sonata.admin.security.handler.role
@@ -176,4 +177,14 @@ sonata_doctrine_orm_admin:
                 bigint:     SonataAdminBundle:CRUD:base_show_field.html.twig
                 integer:    SonataAdminBundle:CRUD:base_show_field.html.twig
                 decimal:    SonataAdminBundle:CRUD:base_show_field.html.twig
+
+#vich uploader
+vich_uploader:
+    db_driver: orm
+    storage: vich_uploader.storage.file_system
+    mappings:
+        image_real:
+            uri_prefix:         /uploads/banner/thumbs
+            upload_destination: %kernel.root_dir%/../web/uploads/banner/thumbs
+            delete_on_remove: true
 

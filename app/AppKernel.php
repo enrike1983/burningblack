@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Bmatzner\ModernizrBundle\BmatznerModernizrBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
 
             //sonata admin, fos user, etc.
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),

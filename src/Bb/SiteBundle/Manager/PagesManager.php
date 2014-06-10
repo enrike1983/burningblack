@@ -26,7 +26,14 @@ class PagesManager
 
 	public function getPageBySlug($slug)
 	{
-		return $this->entityManager->getRepository('BbSiteBundle:Page')
+		$page = $this->entityManager->getRepository('BbSiteBundle:Page')
 			->findPageBySlug($slug);
+
+		if(!$page) {
+			$page = $this->entityManager->getRepository('BbSiteBundle:Page')
+			->findOneBy(array('is_homepage' => true));			
+		}
+
+		return $page;
 	}
 }

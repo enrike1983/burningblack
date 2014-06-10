@@ -7,6 +7,7 @@
     <parameters>
         <parameter key="bb_admin.news.class">Bb\AdminBundle\Admin\NewsAdmin</parameter>
         <parameter key="bb_admin.gigs.class">Bb\AdminBundle\Admin\GigsAdmin</parameter>
+        <parameter key="bb_admin.banner.class">Bb\AdminBundle\Admin\BannerAdmin</parameter>
     </parameters>
 
     <services>
@@ -21,6 +22,12 @@
             <argument>Bb\SiteBundle\Entity\Gig</argument>
             <argument>SonataAdminBundle:CRUD</argument>
             <tag name="sonata.admin" manager_type="orm" group="Gigs" label="Gigs"/>
-        </service>        
+        </service>       
+        <service id="bb_admin.banner" class="%bb_admin.banner.class%">
+            <argument />
+            <argument>Bb\SiteBundle\Entity\Banner</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <tag name="sonata.admin" manager_type="orm" group="Banner" label="Banner"/>
+        </service>            
     </services>
 </container>

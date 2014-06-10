@@ -44,6 +44,11 @@ class Page
      */
     protected $in_menu = true;   
 
+     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    protected $is_homepage = false;      
+
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
@@ -283,5 +288,28 @@ class Page
     public function getMenuPosition()
     {
         return $this->menu_position;
+    }
+
+    /**
+     * Set is_homepage
+     *
+     * @param boolean $isHomepage
+     * @return Page
+     */
+    public function setIsHomepage($isHomepage)
+    {
+        $this->is_homepage = $isHomepage;
+
+        return $this;
+    }
+
+    /**
+     * Get is_homepage
+     *
+     * @return boolean 
+     */
+    public function getIsHomepage()
+    {
+        return $this->is_homepage;
     }
 }
