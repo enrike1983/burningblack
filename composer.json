@@ -21,6 +21,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "bmatzner/foundation-bundle": "~5.2",
         "bmatzner/modernizr-bundle": "~2.7",
+        "phpunit/phpunit": "4.1.3",
 
         "gedmo/doctrine-extensions": "v2.3.9",
         "doctrine/doctrine-fixtures-bundle": "v2.2.0",
