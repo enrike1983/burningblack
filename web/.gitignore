@@ -1,6 +1,13 @@
 /vendor/*
-/app/cache
-/app/logs
+*/logs/*
+*/cache/*
+web/uploads
+web/bundles/*
+web/js/*
+web/css/*
+web/phone/js/*
+web/phone/css/*
+web/sitemaps/*
 .sass-cache
 /src/Bb/SiteBundle/Resources/public/scss/.sass-cache
 /web/bundles
